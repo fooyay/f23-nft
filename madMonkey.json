@@ -1,0 +1,11 @@
+{
+    "name": "Mad Monkey",
+    "description": "This is the happy one.",
+    "attributes": [
+        {
+            "trait_type": "happiness",
+            "value": 100
+        }
+    ],
+    "image": "https://ipfs.io/ipfs/QmbtkEog49B4knRznBQmFGKDc6R2YhVz4dqUQvgWcE34SF?filename=happy_monkey.svg"
+}

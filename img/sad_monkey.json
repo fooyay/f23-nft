@@ -1,0 +1,11 @@
+{
+    "name": "Mad Monkey",
+    "description": "This is the sad one.",
+    "attributes": [
+        {
+            "trait_type": "sadness",
+            "value": 100
+        }
+    ],
+    "image": "https://lavender-fluttering-toucan-349.mypinata.cloud/ipfs/QmaQCHcfqDAyi1y9489zogtniyaiLRa6ktEjjGTUefZrb7"
+}   

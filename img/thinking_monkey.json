@@ -1,0 +1,11 @@
+{
+    "name": "Mad Monkey",
+    "description": "This is the thinking one.",
+    "attributes": [
+        {
+            "trait_type": "intellect",
+            "value": 60
+        }
+    ],
+    "image": "https://lavender-fluttering-toucan-349.mypinata.cloud/ipfs/QmSLZYmpPpsVQYNmqgkmfe8dCCZwa2wPjPHizdECsewDea"
+}   

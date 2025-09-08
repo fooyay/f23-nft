@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 
-pragma solidity ^0.8.18;
+pragma solidity ^0.8.19;
 
 import {Script, console} from "forge-std/Script.sol";
 import {MoodMonkeyNft} from "../src/MoodMonkeyNft.sol";
@@ -12,21 +12,14 @@ contract DeployMoodMonkeyNft is Script {
         string memory sadMonkeySvg = vm.readFile("./img/sad_monkey.svg");
 
         vm.startBroadcast();
-        MoodMonkeyNft moodMonkeyNft = new MoodMonkeyNft(
-            svgToImageURI(sadMonkeySvg),
-            svgToImageURI(happyMonkeySvg)
-        );
+        MoodMonkeyNft moodMonkeyNft = new MoodMonkeyNft(svgToImageURI(sadMonkeySvg), svgToImageURI(happyMonkeySvg));
         vm.stopBroadcast();
         return moodMonkeyNft;
     }
 
-    function svgToImageURI(
-        string memory svg
-    ) public pure returns (string memory) {
+    function svgToImageURI(string memory svg) public pure returns (string memory) {
         string memory baseURL = "data:image/svg+xml;base64,";
-        string memory svgBase64Encoded = Base64.encode(
-            bytes(string(abi.encodePacked(svg)))
-        );
-        return string(abi.encodePacked(baseURL, svgBase64Encoded));
+        string memory svgBase64Encoded = Base64.encode(bytes(svg));
+        return string.concat(baseURL, svgBase64Encoded);
     }
 }

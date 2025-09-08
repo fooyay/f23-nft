@@ -39,9 +39,6 @@ contract MoodMonkeyNftIntegrationTest is Test {
         console.log(moodMonkeyNft.tokenURI(0));
         console.log("and then sad svg:");
         console.log(SAD_SVG_URI);
-        assertEq(
-            keccak256(abi.encodePacked(moodMonkeyNft.tokenURI(0))),
-            keccak256(abi.encodePacked(SAD_SVG_URI))
-        );
+        assertEq(moodMonkeyNft.tokenURI(0), SAD_SVG_URI);
     }
 }

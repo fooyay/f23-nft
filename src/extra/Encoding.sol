@@ -8,4 +8,25 @@ contract Encoding {
         string memory c = string(abi.encodePacked(a, b));
         return c;
     }
+
+    function encodeString() public pure returns (bytes memory) {
+        string memory a = "a";
+        string memory b = "b";
+        bytes memory someString = abi.encode(a, b);
+        return someString;
+    }
+
+    function encodeStringPacked() public pure returns (bytes memory) {
+        string memory a = "a";
+        string memory b = "b";
+        bytes memory someString = abi.encodePacked(a, b);
+        return someString;
+    }
+
+    function stringConcat() public pure returns (string memory) {
+        string memory a = "a";
+        string memory b = "b";
+        string memory c = string.concat(a, b);
+        return c;
+    }
 }

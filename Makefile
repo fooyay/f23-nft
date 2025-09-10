@@ -56,3 +56,8 @@ mintMoodNft:
 flipMoodNft:
 	@forge script script/Interactions.s.sol:FlipMoodMonkeyNft $(NETWORK_ARGS)
 
+deployEncoding:
+	@forge create src/extra/Encoding.sol:Encoding $(NETWORK_ARGS)
+
+deployCallAnything:
+	@forge create src/extra/CallAnything.sol:CallAnything $(NETWORK_ARGS)
